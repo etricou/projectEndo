@@ -1,0 +1,12 @@
+:root {
+  --endo-bg: #f8fafc;
+}
+
+body {
+  background: var(--endo-bg);
+}
+
+.map-wrapper {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
