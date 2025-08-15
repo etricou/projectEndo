@@ -13,7 +13,9 @@ from .db import get_engine, SQL_QUERY
 load_dotenv()
 
 app = FastAPI(title="Project Endo API", version="1.0.0")
-
+@app.get("/")
+def root():
+    return {"ok": True, "message": "Project Endo API. See /health and /docs."}
 # CORS
 allowed = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173")
 origins = [o.strip() for o in allowed.split(",") if o.strip()]
